@@ -250,6 +250,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Unos životinja";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudDob)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

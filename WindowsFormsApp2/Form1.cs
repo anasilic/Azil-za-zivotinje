@@ -52,5 +52,10 @@ namespace WindowsFormsApp2
             Form6 fm6 = new Form6();    
             fm6.ShowDialog();
         }
+
+        private void frmPocetna_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

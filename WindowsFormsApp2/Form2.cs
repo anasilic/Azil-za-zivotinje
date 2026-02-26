@@ -41,5 +41,10 @@ namespace WindowsFormsApp2
             string zapis =Ime.Text + "|" + Vrsta.Text + "|" + Pasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked
             Admin.Unos(zapis);
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
