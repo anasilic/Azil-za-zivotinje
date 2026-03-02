@@ -38,7 +38,7 @@ namespace WindowsFormsApp2
         {
             openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
-            string zapis =Ime.Text + "|" + Vrsta.Text + "|" + Pasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked
+            string zapis =Ime.Text + "|" + Vrsta.Text + "|" + Pasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked + "|" + txtNapomena.Text + "|" + slika;
             Admin.Unos(zapis);
         }
 

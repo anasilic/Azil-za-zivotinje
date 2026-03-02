@@ -16,5 +16,19 @@ namespace WindowsFormsApp2
             sw.WriteLine(zapis);
             sw.Close();
         }
+
+        public static  List<string> Ucitaj ()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadLine();
+            while (linija !=null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
     }
 }
