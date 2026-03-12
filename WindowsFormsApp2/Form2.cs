@@ -36,8 +36,36 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+
+            
             string slika = openFileDialog1.FileName;
+            string spol;
+            string kast = "";
+            string cjep="";
+            if (cbCijep.Checked=true)
+                {
+                    cjep = "Da";
+                }
+                else 
+                {
+                    cjep = "Ne";
+            }
+            if (cbKast.Checked=true)
+            {
+                kast = "Da";
+            }
+             else
+            {
+                kast = "Ne";
+            }
+            if (rbM.Checked=true)
+            {
+                spol = "Muško";
+            }
+            else if (rbZ.Checked=true)
+            {
+                spol = "Žensko";
+            }
             string zapis =Ime.Text + "|" + Vrsta.Text + "|" + Pasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked + "|" + txtNapomena.Text + "|" + slika;
             Admin.Unos(zapis);
         }
