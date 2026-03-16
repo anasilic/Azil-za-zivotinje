@@ -16,5 +16,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Admin.Vrste().Distinct().ToList();
+        }
     }
 }

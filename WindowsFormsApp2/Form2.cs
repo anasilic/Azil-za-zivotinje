@@ -44,19 +44,19 @@ namespace WindowsFormsApp2
             string cjep="";
             if (cbCijep.Checked=true)
                 {
-                    cjep = "Da";
+                    cjep = "Cijepljen";
                 }
                 else 
                 {
-                    cjep = "Ne";
+                    cjep = "Nije cijepljen";
             }
             if (cbKast.Checked=true)
             {
-                kast = "Da";
+                kast = "Kastriran";
             }
              else
             {
-                kast = "Ne";
+                kast = "Nije kastriran";
             }
             if (rbM.Checked=true)
             {
@@ -68,6 +68,17 @@ namespace WindowsFormsApp2
             }
             string zapis =Ime.Text + "|" + Vrsta.Text + "|" + Pasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked + "|" + txtNapomena.Text + "|" + slika;
             Admin.Unos(zapis);
+            Ime.Clear();
+            Vrsta.Clear();
+            Pasmina.Clear();
+            rbM.Checked = false;
+            rbZ.Checked = false;
+            nudDob.Value = 0;
+            dtpDolazak.Value = DateTime.Now;
+            cbCijep.Checked = false;
+            cbKast.Checked = false;
+            txtNapomena.Clear();
+                
         }
 
         private void Form2_Load(object sender, EventArgs e)

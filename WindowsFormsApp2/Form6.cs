@@ -16,5 +16,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
