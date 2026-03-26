@@ -35,6 +35,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.NaseZivotinje = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -94,11 +96,31 @@
             this.button1.Text = "Udomi";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // NaseZivotinje
+            // 
+            this.NaseZivotinje.FormattingEnabled = true;
+            this.NaseZivotinje.Location = new System.Drawing.Point(480, 99);
+            this.NaseZivotinje.Name = "NaseZivotinje";
+            this.NaseZivotinje.Size = new System.Drawing.Size(280, 277);
+            this.NaseZivotinje.TabIndex = 7;
+            this.NaseZivotinje.DoubleClick += new System.EventHandler(this.NaseZivotinje_DoubleClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(477, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(216, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "kliknite 2 puta na zivotinju koju zelite udomit:";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NaseZivotinje);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -123,5 +145,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox NaseZivotinje;
+        private System.Windows.Forms.Label label4;
     }
 }

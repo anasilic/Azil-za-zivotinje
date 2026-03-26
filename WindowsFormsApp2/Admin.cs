@@ -17,12 +17,12 @@ namespace WindowsFormsApp2
             sw.Close();
         }
 
-        public static  List<string> Ucitaj ()
+        public static List<string> Ucitaj()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
             string linija = sr.ReadLine();
-            while (linija !=null)
+            while (linija != null)
             {
                 lista.Add(linija);
                 linija = sr.ReadLine();
@@ -46,7 +46,7 @@ namespace WindowsFormsApp2
             sr.Close();
             return lista;
         }
-        public static List<string>PronadiPoVrsti(string kriterij)
+        public static List<string> PronadiPoVrsti(string kriterij)
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
@@ -54,7 +54,7 @@ namespace WindowsFormsApp2
             while (linija != null)
             {
                 string[] dijelovi = linija.Split('|');
-               
+
                 if (dijelovi[1] == kriterij)
                 {
                     lista.Add(linija);
@@ -64,5 +64,34 @@ namespace WindowsFormsApp2
             sr.Close();
             return lista;
         }
-    }
-}
+        public static void UnosUdomitelja(string zapis)
+        {
+            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
+            sw.WriteLine(zapis);
+            sw.Close();
+        }
+
+        public static List<string> UcitajUdomitelje()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("udomitelji.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+
+    
+
+        public static List<string> VrsteBroj()
+        {
+            List
+        }
+    
+
+
+
