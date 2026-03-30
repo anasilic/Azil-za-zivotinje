@@ -22,6 +22,7 @@ namespace WindowsFormsApp2
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
             string linija = sr.ReadLine();
+
             while (linija != null)
             {
                 lista.Add(linija);
@@ -44,6 +45,7 @@ namespace WindowsFormsApp2
                 linija = sr.ReadLine();
             }
             sr.Close();
+            lista = lista.Distinct().ToList();
             return lista;
         }
         public static List<string> PronadiPoVrsti(string kriterij)
@@ -85,13 +87,55 @@ namespace WindowsFormsApp2
             return lista;
         }
 
-    
+
 
         public static List<string> VrsteBroj()
         {
-            List
+            List<string> lista = Ucitaj();
+            List<string> lista2 = Vrste();
+            List<string> lista3 = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+
+            foreach (string vrsta in lista2)
+            {
+                int brojac = 0;
+                foreach (string linija in lista)
+                {
+                    string[] dijelovi = linija.Split('|');
+                    if (dijelovi[1] == vrsta)
+                    {
+                        brojac++;
+                    }
+                }
+                lista3.Add(vrsta + " : " + brojac);
+            }
+            return lista3;
+
         }
-    
+
+        public static double ProsjecnaDob()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadLine();
+            int brojac = 0;
+            int suma = 0;
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                int dob = int.Parse(dijelovi[4]);
+                suma += dob;
+                brojac++;
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            double prosjek = (double)suma / brojac;
+            return prosjek;
+        }
+    }
+}
+
+
 
 
 

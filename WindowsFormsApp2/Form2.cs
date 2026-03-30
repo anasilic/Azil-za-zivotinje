@@ -39,10 +39,10 @@ namespace WindowsFormsApp2
 
             
             string slika = openFileDialog1.FileName;
-            string spol;
+            string spol = "";
             string kast = "";
             string cjep="";
-            if (cbCijep.Checked=true)
+            if (cbCijep.Checked == true)
                 {
                     cjep = "Cijepljen";
                 }
@@ -50,7 +50,7 @@ namespace WindowsFormsApp2
                 {
                     cjep = "Nije cijepljen";
             }
-            if (cbKast.Checked=true)
+            if (cbKast.Checked == true)
             {
                 kast = "Kastriran";
             }
@@ -58,11 +58,11 @@ namespace WindowsFormsApp2
             {
                 kast = "Nije kastriran";
             }
-            if (rbM.Checked=true)
+            if (rbM.Checked == true)
             {
                 spol = "Muško";
             }
-            else if (rbZ.Checked=true)
+            else if (rbZ.Checked == true)
             {
                 spol = "Žensko";
             }
