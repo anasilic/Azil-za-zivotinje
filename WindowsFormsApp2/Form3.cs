@@ -83,7 +83,7 @@ namespace WindowsFormsApp2
                 textBox7.Text = prvi[6];
                 textBox8.Text = prvi[7];
                 textBox9.Text = prvi[8];
-                pictureBox1.Load(prvi[9]);
+                pictureBox1.Load(prvi[10]);
             }
             else
             {
